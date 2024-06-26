@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G2l-7k-BcJ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NewsViewController" customModule="HackerNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="136-Iz-acK">
+                                <rect key="frame" x="0.0" y="103" width="393" height="750"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArticleTableViewCell" rowHeight="103" id="GYO-wv-fox" customClass="ArticleTableViewCell" customModule="HackerNews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="103"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GYO-wv-fox" id="Fbt-B7-dpR">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="103"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFP-EU-ogv">
+                                                    <rect key="frame" x="20" y="10" width="353" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bp4-EZ-eNN">
+                                                    <rect key="frame" x="20" y="41" width="353" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DI9-1k-5lR">
+                                                    <rect key="frame" x="20" y="72" width="353" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" name="AccentColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DI9-1k-5lR" firstAttribute="leading" secondItem="Fbt-B7-dpR" secondAttribute="leading" constant="20" id="AWy-qf-fqw"/>
+                                                <constraint firstAttribute="trailing" secondItem="DI9-1k-5lR" secondAttribute="trailing" constant="20" id="Fgv-tg-d6d"/>
+                                                <constraint firstAttribute="trailing" secondItem="Bp4-EZ-eNN" secondAttribute="trailing" constant="20" id="Q0q-bI-EfV"/>
+                                                <constraint firstItem="DI9-1k-5lR" firstAttribute="top" secondItem="Bp4-EZ-eNN" secondAttribute="bottom" constant="10" id="d83-Ok-8hM"/>
+                                                <constraint firstAttribute="bottom" secondItem="DI9-1k-5lR" secondAttribute="bottom" constant="10" id="hKr-xL-ysJ"/>
+                                                <constraint firstItem="Bp4-EZ-eNN" firstAttribute="top" secondItem="OFP-EU-ogv" secondAttribute="bottom" constant="10" id="i5a-j1-cno"/>
+                                                <constraint firstAttribute="trailing" secondItem="OFP-EU-ogv" secondAttribute="trailing" constant="20" id="kwQ-V1-qnn"/>
+                                                <constraint firstItem="Bp4-EZ-eNN" firstAttribute="leading" secondItem="Fbt-B7-dpR" secondAttribute="leading" constant="20" id="nDW-y8-JdM"/>
+                                                <constraint firstItem="OFP-EU-ogv" firstAttribute="top" secondItem="Fbt-B7-dpR" secondAttribute="top" constant="10" id="sRI-a8-e39"/>
+                                                <constraint firstItem="OFP-EU-ogv" firstAttribute="leading" secondItem="Fbt-B7-dpR" secondAttribute="leading" constant="20" id="xtQ-zQ-Tea"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="articleUrlLabel" destination="DI9-1k-5lR" id="pgx-gT-aih"/>
+                                            <outlet property="authorLabel" destination="Bp4-EZ-eNN" id="jhM-iO-6gS"/>
+                                            <outlet property="titleLabel" destination="OFP-EU-ogv" id="iid-s5-lV1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="136-Iz-acK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AGE-e4-Tki"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="136-Iz-acK" secondAttribute="bottom" constant="-35" id="RP1-m1-uVx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="136-Iz-acK" secondAttribute="trailing" id="qaY-45-eMc"/>
+                            <constraint firstItem="136-Iz-acK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xFd-7F-fZj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Zb-uR-7iz"/>
+                    <connections>
+                        <outlet property="articleTableView" destination="136-Iz-acK" id="aCW-42-21L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976.33587786259534" y="-27.464788732394368"/>
+        </scene>
+        <!--Article View Controller-->
+        <scene sceneID="cfv-J6-iwa">
+            <objects>
+                <viewController storyboardIdentifier="ArticleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vPc-sj-8Fl" customClass="ArticleViewController" customModule="HackerNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dXn-Ec-xfu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3J-KS-3oN">
+                                <rect key="frame" x="0.0" y="59" width="393" height="794"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Beh-8O-Zpc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="h3J-KS-3oN" firstAttribute="leading" secondItem="Beh-8O-Zpc" secondAttribute="leading" id="8Bo-uI-XEe"/>
+                            <constraint firstItem="Beh-8O-Zpc" firstAttribute="bottom" secondItem="h3J-KS-3oN" secondAttribute="bottom" constant="-35" id="ASl-ak-JVi"/>
+                            <constraint firstItem="Beh-8O-Zpc" firstAttribute="trailing" secondItem="h3J-KS-3oN" secondAttribute="trailing" id="XDD-Rc-Q5n"/>
+                            <constraint firstItem="h3J-KS-3oN" firstAttribute="top" secondItem="Beh-8O-Zpc" secondAttribute="top" id="xF6-Jc-JfS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="articleWKWebView" destination="h3J-KS-3oN" id="noM-0n-YYY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Imq-M7-hZy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1735" y="-27"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Em5-Co-uSO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G2l-7k-BcJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LYZ-bA-h8v">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4vc-3W-HW6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FbY-j6-5BB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49.618320610687022" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
